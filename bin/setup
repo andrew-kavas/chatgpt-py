@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+# copy constants.py
+if [[ ! -e src/constants/constants.py ]]; then
+  cp src/constants/constants.py.example src/constants/constants.py
+fi
+
+# create and activate virtual environment
+python -m venv .openai-env
+source .openai-env/bin/activate
+
+# install packages
+pip install --upgrade pip
+pip install --upgrade openai
+pip install -U langchain-openai
+pip install "unstructured[pdf]"

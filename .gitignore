@@ -1,0 +1,8 @@
+constants.py
+__pycache__
+persist/
+site-packages/
+.DS_Store
+.chroma/
+.openai-env/
+.openai-env/*
